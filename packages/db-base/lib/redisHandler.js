@@ -114,6 +114,7 @@ class RedisHandler extends EventEmitter {
         }
         this.writeQueue.push({ id: responseId, data: false });
 
+        command = command.toLowerCase();
         if (command === 'multi') {
             this._handleMulti(responseId);
             return;
