@@ -19,6 +19,7 @@
     "iobroker.js-controller": "file:packages/controller"
   },
   "devDependencies": {
+    "@node-redis/client": "^1.0.2",
     "@alcalzone/release-script": "~3.4.2",
     "@alcalzone/release-script-plugin-iobroker": "~3.4.1",
     "@alcalzone/release-script-plugin-lerna": "~3.4.1",
