@@ -32,7 +32,6 @@ class RedisHandler {
     }
 
     _handleCommand(data) {
-        const t = process.hrtime();
         //console.log(data);
         this._write(Resp.encodeInteger(1));
     }

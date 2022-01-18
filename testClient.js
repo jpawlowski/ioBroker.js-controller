@@ -1,4 +1,6 @@
 const redis = require('ioredis');
+// 1625 - 2000 für einzelnes write = 8k für 4
+// 3667n - 12250n für einzelnes Write, häufig 122453n für 4
 
 function main() {
     // 6379 vs 9001
@@ -22,7 +24,6 @@ function main() {
         console.log('finished multi/exec');
         console.log(port === 6379 ? 'real redis' : 'simulator');
         console.log(process.hrtime.bigint() - time);
-
         console.log('run await');
         time = process.hrtime.bigint();
 
