@@ -10,6 +10,7 @@ function main() {
 
     client.on('connect', async () => {
         console.log('connected');
+
         let time = process.hrtime.bigint();
 
         for (let i = 0; i < N_ITER; i++) {
@@ -24,9 +25,9 @@ function main() {
         console.log('finished multi/exec');
         console.log(port === 6379 ? 'real redis' : 'simulator');
         console.log(process.hrtime.bigint() - time);
+
         console.log('run await');
         time = process.hrtime.bigint();
-
         for (let i = 0; i < N_ITER; i++) {
             const commands = [];
 
