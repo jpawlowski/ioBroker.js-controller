@@ -43,9 +43,24 @@
   },
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "build/index.d.ts": [
+        "build/index.d.ts"
+      ],
+      "./tools": [
+        "build/lib/common/tools.d.ts"
+      ]
+    }
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
+  },
+  "exports": {
+    ".": "./build/index.js",
+    "./package.json": "./package.json",
+    "./tools": "./build/lib/common/tools.js"
   },
   "files": [
     "build/lib/",
